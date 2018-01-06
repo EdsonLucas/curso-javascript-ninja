@@ -114,8 +114,8 @@ carro.addPessoas = function(x = 0) {
   carro.quantidadePessoas += x;
   
   if(x === 1) {
-     a = 'a';
-     b = 'e';
+     var a = 'a';
+     var b = 'e';
   } else {
      a = 'as'
      b = 'em';
