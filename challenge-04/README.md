@@ -110,10 +110,10 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-carro.addPessoas = function(x = 0) {
-  carro.quantidadePessoas += x;
+carro.addPessoas = function(x) {
+  var totalPessoas = carro.quantidadePessoas + x;
   
-  if(x === 1) {
+  if(totalPessoas === 1) {
      var a = 'a';
      var b = 'e';
   } else {
@@ -125,11 +125,12 @@ carro.addPessoas = function(x = 0) {
     return "O carro já está lotado!";
   }
   
-  if(carro.quantidadePessoas > carro.assentos) {
-    calc = carro.assentos - x;
+  if(totalPessoas > carro.assentos) {
+    calc = carro.assentos - carro.quantidadePessoas;
     return "Só cab"+b+" mais "+calc+" pesso"+a+"!";
   }
-  
+      
+    carro.quantidadePessoas += x;
     return "Já temos "+carro.quantidadePessoas+" pesso"+a+" no carro!";
 }
 
@@ -160,13 +161,13 @@ carro.obterMarca();
 carro.obterModelo();
 
 // Adicione 2 pessoas no carro.
-carro.addPessoas(2);
+carro.addPessoas(2); // 'Já temos 2 pessoas no carro!'
 
 // Adicione mais 4 pessoas no carro.
-carro.addPessoas(4);
+carro.addPessoas(4); // 'Só cabem mais 3 pessoas!'
 
 // Faça o carro encher.
-carro.addPessoas(5);
+carro.addPessoas(3); // 'Já temos 5 pessoas no carro!'
 
 // Tire 4 pessoas do carro.
 carro.removePessoas = function(x) {
@@ -176,8 +177,8 @@ carro.removePessoas = function(x) {
 carro.removePessoas(4);
 
 // Adicione 10 pessoas no carro.
-carro.addPessoas(10);
+carro.addPessoas(10); // 'Só cabem mais 4 pessoas!'
 
 // Quantas pessoas temos no carro?
-17
+1
 ```
