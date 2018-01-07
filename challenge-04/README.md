@@ -121,7 +121,7 @@ carro.addPessoas = function(x = 0) {
      b = 'em';
   }
 
-  if(x === carro.assentos) {
+  if(carro.quantidadePessoas === carro.assentos) {
     return "O carro já está lotado!";
   }
   
