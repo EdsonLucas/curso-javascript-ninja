@@ -13,7 +13,7 @@ Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
 estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
-// ?
+var teams = ['Vue', 'React', 'Angular', 'Node', 'Typescript'];
 
 console.log( 'Times que estão participando do campeonato:', teams );
 
@@ -33,7 +33,16 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     - Se não houver time para a posição passada, deve retornar a mensagem:
     "Não temos a informação do time que está nessa posição."
 */
-// ?
+function showTeamPosition(num) {
+  var valor = num;
+  
+  if(num > teams.length) {
+     return "Não temos a informação do time que está nessa posição.";
+  } else { 
+    valor++;
+    return "O time que está em "+valor+"º lugar é o "+teams[num]+"."
+  }
+}
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
