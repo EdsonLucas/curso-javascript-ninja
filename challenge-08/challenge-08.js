@@ -31,14 +31,14 @@ function showName() {
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
 */
-var varShowName = showName();
+var varShowName = showName;
 
 /*
 Usando a variável criada acima, mostre no console o nome e o retorno da função
 atribuída a ela, com a seguinte frase:
 "A função [NOME DA FUNÇÃO] retorna [RETORNO DA FUNÇÃO]."
 */
-"A função "+showName.name+" retorna "+showName()+"."
+"A função "+varShowName.name+" retorna "+varShowName()+"."
 
 /*
 Crie uma função literal chamada `calculator`, que funcione assim:
