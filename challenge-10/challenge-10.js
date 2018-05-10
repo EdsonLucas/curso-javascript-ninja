@@ -99,7 +99,7 @@
   - Declare 3 variáveis: "number1" e "number2", iniciando com valor zero, e
   "operationSignal", sem valor por enquanto.
   */
-  var num1 = 0, num2 = 0, operationSignal;
+  var number1 = 0, number2 = 0, operationSignal;
 
   /*
   PASSO 2:
