@@ -9,10 +9,10 @@
   das variáveis. Analise o que está sendo impresso no console para saber como
   resolver o problema corretamente.
   */
-  var five = 5;
+  var five = Number('5');
   console.log( five + ' é número?', typeof five === 'number' );
 
-  var concat = '10' + '10';
+  var concat = String(10) + String(10);
   console.log( '"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string' );
 
   /*
@@ -24,12 +24,12 @@
   função receberá dois parâmetros e retornará a operação referente à sua
   propriedade, usando os valores passados por parâmetro.
   */
-  var obj = {
-    '+': function(x, y) { return x + y },
-    '-': function(x, y) { return x - y },
-    '*': function(x, y) { return x * y },
-    '/': function(x, y) { return x / y },
-    '%': function(x, y) { return x % y },
+  var operation = {
+    '+': function(x, y) { return x + y; },
+    '-': function(x, y) { return x - y; },
+    '*': function(x, y) { return x * y; },
+    '/': function(x, y) { return x / y; },
+    '%': function(x, y) { return x % y; },
   }
 
   /*
@@ -195,7 +195,7 @@
        var number2 = 10;
        console.log( showOperationMessage(operationSignal, number1, number2), 
                     mod(number1, number2));
-   } else{
+   } else {
        console.log( showErrorMessage( operationSignal ));
    }
 
