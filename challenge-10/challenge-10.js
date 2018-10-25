@@ -43,7 +43,7 @@
   - O desafio é fazer o retorno sem usar "if" ou "switch".
   */
   function isOperatorValid(operator) {
-    return !!obj[operator]
+    return !!operation[operator]
   }
 
   /*
@@ -67,7 +67,7 @@
       if(typeof x !== 'number' && typeof y !== 'number') {
         return false;  
       }
-      return obj[operador](x, y);
+      return operation[operador](x, y);
     }
     
   }
