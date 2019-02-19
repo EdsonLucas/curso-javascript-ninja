@@ -1,4 +1,4 @@
-// Envolva todo o código desse arquivo em uma IIFE (incluindo esse comentário).
+(function() {// Envolva todo o código desse arquivo em uma IIFE (incluindo esse comentário).
 
 /*
 Crie uma variável chamada `once`, que recebe `false` como seu valor.
@@ -7,14 +7,23 @@ loop, mostre no console a mensagem:
 'Entrou ao menos uma vez!'
 Qual loop você deve usar para que essa mensagem seja mostrada no console?
 */
-// ?
+var once = false;
+while(!once) {
+  console.log('Entrou ao menos uma vezx!');
+  break;
+}
 
 /*
 Crie um objeto chamado `person`, que receba as seguintes propriedades:
 - 'name', 'age', 'weight' e 'birthday'. Preencha com os valores corretos
 para o nome, idade, peso e data de nascimento dessa pessoa.
 */
-// ?
+var person = {
+  name: 'Edson',
+  age: 11,
+  weight: 121 + 'Kg',
+  birthday: new Date()
+};
 
 /*
 Use um loop para percorrer o objeto criado acima, mostrando no console
@@ -52,3 +61,4 @@ Mostrar no console os números do array.
 */
 console.log( 'Pares de 0 a 20:' );
 // ?
+})();
